@@ -95,8 +95,8 @@ bot.on('message', function (msg) {
 
     //call API to get branch details based branchId
 
-      bot.sendMessage(chatId, 'Branch details as follow : ' + '\r\n Name : ' + '\r\n Address : '
-             + '\r\n Contact Number : ' + '\r\n Queue : '
+      bot.sendMessage(chatId, 'Branch details as follow : ' + '\r\n Name : KLCC Branch' + '\r\n Address : Lot C21-C, Concourse Expansion Suria KLCC Kuala Lumpur City Centre 50088 Kuala Lumpur'
+             + '\r\n Contact Number : 03-2026 0239' + '\r\n Total Customer in Queue : 10' + '\r\n Current Customer : 3' + '\r\n Average Processing Time : 10.5 minutes'
              + '\r\n', inline_keyboard_activate_q).then(function (sended){});
   }
 
@@ -150,19 +150,13 @@ bot.on('callback_query', function (msg) {
     var photo = 'qroutput_1476146226.png';
     bot.sendPhoto(chatId, photo, {caption: 'Please show this at counter'});
 
-    // setTimeout(uploadqr(chatId, qroutput), 10000);
-
     bot.sendMessage(chatId, '✅ You have activated your queue number');
-
-    // bot.sendMessage(chatId, '✅ You have activated your queue number' + '\r\n' + uploadqr(chatId, qroutput
-    // ));
 
   }
   else {
     var cleanBranchId = msg.data.substring(3);
-    bot.sendMessage(chatId, 'Branch details as follow : ' + '\r\n Branch ID : ' + cleanBranchId  + '\r\n Name : ' + '\r\n Address : '
-           + '\r\n Contact Number : ' + '\r\n Queue : '
-           + '\r\n', inline_keyboard_activate_q);
+    bot.sendMessage(chatId, 'Branch details as follow : ' + '\r\n Branch ID : ' + cleanBranchId  + '\r\n Name : Maybank KLCC' + '\r\n Address : Lot C21-C, Concourse Expansion Suria KLCC Kuala Lumpur City Centre 50088 Kuala Lumpur'
+           + '\r\n Contact Number : 03-2026 0239' + '\r\n Total Customer in Queue : 10' + '\r\n Current Customer : 3' + '\r\n Average Processing Time : 10.5 minutes' + '\r\n', inline_keyboard_activate_q);
   }
 
 });
